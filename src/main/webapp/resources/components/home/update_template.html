@@ -1,0 +1,121 @@
+
+
+
+
+<md-dialog class="fullscreen-dialog" aria-label="Обновить книгу">
+
+
+
+
+
+
+    <form ng-cloak class="modal-form">
+        <md-toolbar class="md-toolbar-tools">
+
+                <h2>Обновить книгу</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialog()">
+                    <i class="material-icons">close</i>
+                </md-button>
+
+        </md-toolbar>
+
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+
+
+
+
+
+
+
+
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+
+                        <md-input-container class="md-block">
+                            <label>Название книги</label>
+                            <input placeholder="Название книги" ng-model="title" autofocus>
+
+                        </md-input-container>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="row">
+
+
+                    <div class="col-md-12">
+
+                        <md-input-container class="md-block">
+                            <label>Описание книги</label>
+                            <textarea placeholder="Описание книги" ng-model="text" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                        </md-input-container>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <div class="row categclass">
+
+                    <div class="col-md-12">
+
+                        <md-input-container class="md-block">
+                            <label class="productcategory">Выбери статус</label>
+                            <md-select ng-model="userCategory">
+
+                                <md-option ng-repeat="product in categorys" ng-value="product.name">
+                                    {{product.name}}
+                                </md-option>
+                            </md-select>
+                        </md-input-container>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+                <div class="row">
+
+                    <div class="col-md-1 pull-left">
+
+                        <md-button class="md-raised md-primary" ng-click="updateNew()">Обновить</md-button>
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </md-dialog-content>
+
+
+    </form>
+</md-dialog>

@@ -1,0 +1,105 @@
+<div class="row" ng-controller="HomeCtrl as ctrl" ng-cloak>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+            <div class="card-header" data-background-color="orange">
+
+                <h3 class="title">{{ctrl.title}}</h3>
+            </div>
+            <div class="card-content">
+
+
+
+
+
+
+                <md-content>
+                    <md-tabs md-dynamic-height md-border-bottom>
+
+
+                        <md-tab label="Книги">
+                            <md-content class="md-padding">
+
+
+
+
+
+
+                                <md-toolbar class="md-table-toolbar alternate">
+                                    <div class="md-toolbar-tools">
+
+
+
+
+                                        <md-button class="md-icon-button" ng-click="ctrl.showAdvanced($event)">
+                                            <i class="material-icons">add</i>
+                                        </md-button>
+
+                                        <md-button class="md-icon-button" ng-click="ctrl.update($event, ctrl.selected)">
+                                            <i class="material-icons">update</i>
+                                        </md-button>
+
+
+                                        <span flex></span>
+                                        <md-button class="md-icon-button" ng-click="ctrl.delete(ctrl.selected)">
+                                            <i class="material-icons">delete</i>
+                                        </md-button>
+
+
+
+
+
+                                    </div>
+                                </md-toolbar>
+
+
+
+                                <!-- exact table from live demo -->
+                                <md-table-container>
+                                    <table md-table md-row-select ng-model="ctrl.selected">
+                                        <thead md-head>
+                                        <tr md-row>
+                                            <th md-column>ID</th>
+                                            <th md-column>Название</th>
+                                            <th md-column>Описание</th>
+                                            <th md-column>Статус</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody md-body>
+                                        <tr md-row md-select="data" md-select-id="id" md-auto-select ng-repeat="data in ctrl.data">
+                                            <td md-cell>{{data.id}}</td>
+
+                                            <td md-cell>{{data.name}}</td>
+                                            <td md-cell>{{data.info}}</td>
+                                            <td md-cell>{{data.status}}</td>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </md-table-container>
+
+
+
+
+
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </md-content>
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
