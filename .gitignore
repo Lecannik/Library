@@ -81,3 +81,7 @@ fabric.properties
 hs_err_pid*
 
 /classes/
+/Library.iml
+.idea/
+Library.iml
+lib/
